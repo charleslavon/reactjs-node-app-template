@@ -2,6 +2,13 @@
 
 This React based boilerplate is to be used for building web applications while interfacing with a REST API such as Transform Engine. This template does not come with a backend. It is essentially made up of static resources which are bundled up as an RPM package.
 
+
+## Clone the project
+1. create a directory for your new app, mkdir my-new-app & cd my-new-app
+2. git clone git@git.labs.nuance.com:dcs-webteam/reactjs-template-app.git /my-new-app
+3. reinitialize the git settings, git init
+
+
 ### Environment Requirements
 
 ##### Node Version
@@ -20,9 +27,6 @@ commands below:
  n stable
 ```
 
-
-#### Setup
-  - Clone the project from its git repository: https://git.assembla.com/tgt-git.web-team.git
 
 ##### Using ATOM /Sublime Text `(Recommended)`
  - open your terminal window and run this command within the root directory of
