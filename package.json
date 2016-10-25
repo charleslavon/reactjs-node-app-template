@@ -24,7 +24,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "author": "NUANCE ABU Web Team",
-  "license": "",
+  "license": "(c) Nuance Communications inc. All rights reserved.",
   "dependencies": {
     "axios": "^0.9.1",
     "object-assign": "4.1.0",
