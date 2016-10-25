@@ -23,6 +23,7 @@
     "test:cover:travis": "babel-node node_modules/isparta/bin/isparta cover --root src --report lcovonly _mocha -- --require ./tools/testSetup.js \"src/**/*.spec.js\" && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "test:watch": "npm run test -- --watch"
   },
+  
   "author": "NUANCE ABU Web Team",
   "license": "(c) Nuance Communications inc. All rights reserved.",
   "dependencies": {
