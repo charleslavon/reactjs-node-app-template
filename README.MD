@@ -3,7 +3,7 @@ This ReactJS NodeJS boilerplate app is to be used for quickly spinning up web ap
 
 ##### Clone the project
 1. create a directory for your new app, mkdir my-new-app & cd my-new-app
-2. git clone git@github.com/charleslavon/reactjs-node-app-template.git /my-new-app
+2. git clone {repoURL} /my-new-app
 3. reinitialize the git settings, git init
 
 
