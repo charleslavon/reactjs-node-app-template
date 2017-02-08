@@ -1,11 +1,10 @@
-## Setup Instructions for React Template App
+## Setup Instructions
 
-This React based boilerplate is to be used for building web applications while interfacing with a REST API such as Transform Engine. This template does not come with a backend. It is essentially made up of static resources which are bundled up as an RPM package.
-
+This ReactJS NodeJS boilerplate app is to be used for quickly spinning up web applications with all the necessary configs to support dev and production builds.
 
 ## Clone the project
 1. create a directory for your new app, mkdir my-new-app & cd my-new-app
-2. git clone git@git.labs.nuance.com:dcs-webteam/reactjs-template-app.git /my-new-app
+2. git clone git@github.com/charleslavon/reactjs-node-app-template.git /my-new-app
 3. reinitialize the git settings, git init
 
 
@@ -50,7 +49,7 @@ $ mvn clean package
 ```
 
 `NOTE`
--After executing the commanbd above, you should see a ROOT.war file which you can deploy to a tomcat server.
+-After executing the commanbd above, you should see a ROOT.war file which you can deploy to an apache server.
 
 ###### Using Eclipse
 If you are using Eclipse or STS IDE you can follow the steps below after checking out the project from the repository and into your eclipse workspace.
