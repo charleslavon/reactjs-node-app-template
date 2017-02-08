@@ -1,12 +1,12 @@
 {
-  "name": "React-FrontEnd-Template",
+  "name": "reactjs-node-app-template",
   "version": "0.0.1",
   "description": "A robust template app for building SPA's",
   "main": "index.js",
   "engines": {
     "npm": ">=3"
   },
-  "repository": "https://git.assembla.com/tgt-git.web-team.git",
+  "repository": "https://github.com/charleslavon/reactjs-node-app-template.git",
   "scripts": {
     "start": "npm-run-all --parallel test:watch open:src lint:watch",
     "open:src": "babel-node tools/srcServer.js",
@@ -23,22 +23,11 @@
     "test:cover:travis": "babel-node node_modules/isparta/bin/isparta cover --root src --report lcovonly _mocha -- --require ./tools/testSetup.js \"src/**/*.spec.js\" && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "test:watch": "npm run test -- --watch"
   },
-  
-  "author": "NUANCE ABU Web Team",
-  "license": "(c) Nuance Communications inc. All rights reserved.",
-  "dependencies": {
-    "axios": "^0.9.1",
-    "object-assign": "4.1.0",
-    "react": "15.2.0",
-    "react-dom": "15.2.0",
-    "react-redux": "4.4.5",
-    "react-router": "2.5.2",
-    "react-router-redux": "4.0.5",
-    "react-addons-shallow-compare": "15.3.0",
-    "redux": "3.5.2",
-    "uuid": "2.0.2"
-  },
+
+  "author": "Charles Garrett",
+  "license": "MIT",
   "devDependencies": {
+    "axios": "^0.9.1",
     "babel-cli": "6.10.1",
     "babel-core": "6.10.4",
     "babel-loader": "6.2.4",
@@ -70,8 +59,16 @@
     "mocha": "2.5.3",
     "node-sass": "3.8.0",
     "npm-run-all": "2.3.0",
+    "object-assign": "4.1.0",
     "prompt": "1.0.0",
+    "react": "15.2.0",
+    "react-dom": "15.2.0",
+    "react-redux": "4.4.5",
+    "react-router": "2.5.2",
+    "react-router-redux": "4.0.5",
+    "react-addons-shallow-compare": "15.3.0",
     "react-addons-test-utils": "15.2.0",
+    "redux": "3.5.2",
     "redux-immutable-state-invariant": "1.2.3",
     "replace": "0.3.0",
     "rimraf": "2.5.3",
@@ -80,6 +77,7 @@
     "sinon-chai": "2.8.0",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
+    "uuid": "2.0.2"
     "webpack": "1.13.1",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.12.1",
