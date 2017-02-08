@@ -1,21 +1,27 @@
-/* eslint-disable import/default */
-
 import React from 'react';
 import {render} from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
-import routes from './routes';
+import { Route, Router, IndexRoute, browserHistory } from 'react-router';
+import App from './components/App';
+import HomePageContainer from './containers/HomePageContainer';
+import NotFound from './components/NotFound';
+import { syncHistoryWithStore } from 'react-router-redux'
 import configureStore from './store/configureStore';
-//require('./favicon.ico'); // Tell webpack to load favicon.ico
-//import './styles/styles.scss'; // import css
-import { syncHistoryWithStore } from 'react-router-redux';
+require('./images/favicon.ico'); // Tell webpack to load favicon.ico and/or necessary styles
+///import './styles/mystyles.scss';
+
+
 const store = configureStore();
 
-// Create an enhanced history that syncs navigation events with the store
-const history = syncHistoryWithStore(browserHistory, store);
+const history = syncHistoryWithStore(browserHistory, store)
 
 render(
   <Provider store={store}>
-    <Router history={history} routes={routes} />
-  </Provider>, document.querySelector('.container')
+    <Router history={history}>
+      <Route path="/" component={App}>
+        <IndexRoute component={HomePageContainer}/>
+        <Route path="*" component={NotFound}/>
+      </Route>
+    </Router>
+  </Provider>, document.getElementById('app')
 );
