@@ -1,14 +1,24 @@
 import * as types from '../constants/actionTypes';
 
 
-export default function(state = [], action) {
-
+//seperating concerns with the use of multiple specialized reducers
+const reducers = (state = [], action) => {
     switch (action.type) {
         case types.FETCH_NEWS:
-            return state.concat(action);
-
+          return [
+          ...state,
+          fetchNews(state, action)
+          ];
         default:
             return state;
     }
+};
 
-}
+const fetchNews = (state, action) => {
+  return {
+      day: 'tomorrow',
+      forecast: 'is probably gonna be a long day.'
+  };
+};
+
+export default reducers;
