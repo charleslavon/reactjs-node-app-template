@@ -14,7 +14,7 @@ const reducers = (state = [], action) => {
     }
 };
 
-const fetchNews = (state, action) => {
+const fetchNews = () => {
   return {
       day: 'tomorrow',
       forecast: 'is probably gonna be a long day.'

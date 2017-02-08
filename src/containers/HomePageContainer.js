@@ -20,7 +20,8 @@ class HomePageContainer extends React.Component {
 }
 
 HomePageContainer.propTypes = {
-    actions: PropTypes.object.isRequired
+    actions: PropTypes.object.isRequired,
+    news: PropTypes.object
 };
 
 HomePageContainer.defaultProps = {
