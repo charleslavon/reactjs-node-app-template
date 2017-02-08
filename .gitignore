@@ -13,14 +13,13 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
-# Grunt intermediate storage
-.grunt
-
-
 # Dependencies
 node_modules
 src/node
 node
+
+# IDE project configs
+.idea/
 
 #build folders
 dist
