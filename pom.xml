@@ -1,28 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.connect</groupId>
-  <artifactId>reactjs-FE-template</artifactId>
+  <groupId>com.tmd</groupId>
+  <artifactId>reactjs-node-app-template</artifactId>
   <packaging>war</packaging>
   <version>1.0.0-SNAPSHOT</version>
-  <distributionManagement>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>tgt.release</id>
-      <name>TGT Release Repository</name>
-      <url>http://tgts-nexus.nuance.com:8081/nexus/content/repositories/releases</url>
-      <layout>default</layout>
-    </repository>
-    <snapshotRepository>
-      <uniqueVersion>true</uniqueVersion>
-      <id>tgt.snapshot</id>
-      <name>TGT Snapshot Repository</name>
-      <url>http://tgts-nexus.nuance.com:8081/nexus/content/repositories/snapshots</url>
-      <layout>default</layout>
-    </snapshotRepository>
-  </distributionManagement>
   <scm>
     <connection>
-      scm:git:https://git.assembla.com/tgt-git.web-team.git
+      scm:git:https://github.com/charleslavon/reactjs-node-app-template.git
     </connection>
   </scm>
   <properties>
@@ -56,14 +40,9 @@
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
             </manifest>
             <manifestEntries>
-              <Implementation-Build>${env.SVN_REVISION}</Implementation-Build>
               <AppVersionMajor>${app.version.major}</AppVersionMajor>
               <AppVersionMinor>${app.version.minor}</AppVersionMinor>
               <AppVersionMicro>${app.version.milestone}</AppVersionMicro>
-              <JenkinsBuildId>${env.BUILD_ID}</JenkinsBuildId>
-              <JenkinsBuildTag>${env.BUILD_TAG}</JenkinsBuildTag>
-              <JenkinsJobName>${env.JOB_NAME}</JenkinsJobName>
-              <JenkinsBuildNumber>${env.BUILD_NUMBER}</JenkinsBuildNumber>
             </manifestEntries>
           </archive>
         </configuration>
@@ -134,26 +113,6 @@
               <doUpdate>false</doUpdate>
             </configuration>
       </plugin>
-      <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-antrun-plugin</artifactId>
-       <version>1.6</version>
-       <executions>
-          <execution>
-             <id>antrun-install</id>
-              <phase>deploy</phase>
-               <configuration>
-                  <target>
-                    <ant antfile="../repackage.xml" target="repackage" dir="${project.build.directory}">
-                    </ant>
-                  </target>
-              </configuration>
-              <goals>
-                <goal>run</goal>
-              </goals>
-          </execution>
-        </executions>
-     </plugin>
 </plugins>
 </build>
 </project>
