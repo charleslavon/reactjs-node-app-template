@@ -16,7 +16,7 @@ This ReactJS NodeJS boilerplate app is to be used for quickly spinning up web ap
 ##### Node Version
   `>=` 3
 
-##### Maven Version
+##### Maven Version (Using Maven is optional)
  `>=` 3.1.1
 
 
